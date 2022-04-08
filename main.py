@@ -87,6 +87,11 @@ def goto(alias):
         return render_template("error.html", error="Alias not found!")
 
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
+
+
 @app.errorhandler(Exception)
 def error_handler(e):
     error = errors.put(
