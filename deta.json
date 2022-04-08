@@ -1,5 +1,5 @@
 {
-    "name": "Simple link shortener",
+    "name": "link shortener",
     "description": "One-click personal link shortener.",
     "runtime": "python3.9"
 }
