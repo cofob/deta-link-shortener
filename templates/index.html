@@ -6,7 +6,8 @@
     <h1>Super simple link shortener.</h1>
 
     {% if shotened %}
-        <h3>Successfully shortened! Check <a href="/{{ alias }}">your new alias.</a></h3>
+        <h3>Successfully shortened! Check <a href="/{{ alias }}">your new alias</a> or
+            <a href="/api/delete/{{ delete }}">delete it.</a></h3>
         <a href="/"><button>Reload page</button></a><br>
     {% endif %}
 
