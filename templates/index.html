@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Main{% endblock %}
+
+{% block body %}
+    <h1>Super simple link shortener.</h1>
+
+    {% if shotened %}
+        <h3>Successfully shortened! Check <a href="/{{ alias }}">your new alias.</a></h3>
+        <a href="/"><button>Reload page</button></a><br>
+    {% endif %}
+
+    <form method="post">
+        <label>URL:
+            <input type="url" name="link" required>
+        </label>
+        <label>Alias:
+            <input type="text" name="alias">
+        </label>
+
+        <button type="submit">Shorten!</button>
+    </form>
+
+    <h2>One-click own shortener.</h2>
+
+    <a href="https://go.deta.dev/deploy?repo=https://github.com/cofob/deta-link-shortener">
+        <img src="https://button.deta.dev/1/svg" alt="Deploy">
+    </a>
+{% endblock %}
