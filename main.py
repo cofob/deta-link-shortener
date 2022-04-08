@@ -16,7 +16,7 @@ errors = deta.Base("errors")
 
 
 def shorten(link: str, alias: Union[str, None]):
-    if not alias.strip():
+    if not alias:
         alias = "".join(choices(ascii_lowercase + digits, k=5))
 
     if len(alias) > 10:
